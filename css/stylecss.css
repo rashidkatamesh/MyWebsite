@@ -1,0 +1,517 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    div {
+        overflow: auto;
+    }
+    
+    header {
+        background-color: white;
+        height: 55px;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    
+    header #logo {
+        float: left;
+        font-family: "Sofia";
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        /* to center the text in div horiz. and vertic.*/
+        align-items: center;
+        text-align: left;
+        font-size: 20px;
+    }
+    
+    #headerright {
+        float: left;
+        height: 100%;
+        text-align: right;
+        justify-content: center;
+        /* to center the text in div horiz. and vertic.*/
+        align-items: center;
+        color: black;
+        font-size: 90%;
+        font-family: Georgia, 'Times New Roman', Times;
+        padding-top: 1.3%;
+        display: inline;
+    }
+    
+    #headerright li {
+        display: inline;
+        margin: 1.5%;
+    }
+    
+    section {
+        width: 100%;
+        background-color: aquamarine;
+        line-height: 0px;
+        margin: 0;
+    }
+    
+    section h1 {
+        font-size: 60px;
+        color: Black;
+        padding-top: 170px;
+        padding-left: 100px;
+        margin: 0;
+        overflow-wrap: break-word;
+        line-height: 50px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    section p {
+        padding: 100px;
+        padding-top: 100px;
+        overflow-wrap: break-word;
+        line-height: 23px;
+    }
+    
+    #one {
+        border: 0 solid black;
+        background-color: rgb(187, 184, 184);
+        margin-left: 15%;
+        margin-bottom: 5%;
+        margin-top: -5%;
+        box-sizing: content-box;
+        text-align: center;
+        padding: 2.1%;
+        opacity: 1;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 18px;
+    }
+    
+    #one:hover {
+        opacity: 0.7;
+    }
+    
+    .fa {
+        padding: 0.2%;
+        font-size: 30px;
+        width: 2%;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 0.3%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 45%;
+    }
+    
+    .menu:hover {
+        opacity: 0.3;
+    }
+    
+    .fa:hover {
+        opacity: 0.3;
+    }
+    
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+    
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+    
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }
+    
+    h3 {
+        font-size: 100%;
+        text-align: center;
+        padding-top: 5%;
+    }
+    
+    .rass {
+        float: left;
+        text-align: center;
+        line-height: 180%;
+        padding-top: 1%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    
+    .rass1back {
+        background-image: url('../images/apple.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .rass1 h2 {
+        text-align: center;
+        padding-top: 5%;
+    }
+    
+    .rass1 p {
+        padding-left: 50px;
+        padding-top: 60px;
+    }
+    
+    #boxtwo {
+        background-color: black;
+        color: white;
+        box-sizing: content-box;
+        margin-right: 70%;
+        margin-left: 7.3%;
+        margin-bottom: 30%;
+        margin-top: 5%;
+        text-align: center;
+        padding: 2.1%;
+    }
+    
+    #boxtwo:hover {
+        opacity: 0.6;
+    }
+    
+    #divinfo {
+        background-color: #dcdde1;
+        width: 100%;
+    }
+    
+    .divinfotwo {
+        float: left;
+        margin-right: 1%;
+        margin-left: 1%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        word-spacing: 200px;
+        text-align: center;
+        line-height: 140%;
+        width: 23%;
+    }
+    
+    #ourwork {
+        text-align: center;
+        line-height: 190%;
+    }
+    
+    #ourwork h2 {
+        padding-top: 80px;
+        color: black;
+        text-align: center;
+    }
+    
+    #ourwork p {
+        font-size: 90%;
+        text-align: center;
+    }
+    
+    img.ourworkimg:hover {
+        opacity: 0.4;
+    }
+    
+    #ourskillsback {
+        background-color: #bdc3c7;
+        width: 100%;
+    }
+    
+    #ourskillshead {
+        text-align: center;
+        padding: 80px;
+    }
+    
+    #ourskills {
+        padding-left: 2%;
+        padding-top: 5%;
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+    
+    .threeright {
+        float: left;
+        width: 40%;
+        padding-left: 8%;
+        color: black;
+    }
+    
+    progress {
+        width: 70%;
+        height: 20px;
+        -webkit-appearance: none;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+    }
+    
+    progress {
+        color: rgb(112, 170, 189);
+    }
+    
+    progress::-webkit-progress-value {
+        background: rgb(110, 102, 146);
+    }
+    
+    progress::-moz-progress-bar {
+        background: lightcolor;
+    }
+    
+    .pricing {
+        background-color: rgb(71, 87, 82);
+        width: 100%;
+    }
+    
+    table,
+    th,
+    td {
+        border-collapse: collapse;
+    }
+    
+    th,
+    td {
+        text-align: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    
+    table {
+        width: 70%;
+        margin-bottom: 3%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    th {
+        background-color: #2c3e50;
+    }
+    
+    tr {
+        background-color: #bdc3c7;
+    }
+    
+    .button {
+        background-color: black;
+        border: none;
+        border-radius: 8px;
+        transition-duration: 0.4s;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        font-family: Alegreya SC;
+        width: 130px;
+        height: 40px;
+        box-shadow: 0 8px 16px 0 rgba(160, 18, 18, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .button:hover {
+        opacity: 0.3;
+    }
+    
+    #pinfo {
+        background-color: rgb(240, 238, 238);
+    }
+    
+    #pinfo p {
+        padding: 40px 0 60px 30px;
+        margin-bottom: -2em;
+        line-height: 0.1em;
+        font-size: 1em;
+    }
+    
+    .input1 {
+        width: 94%;
+        height: 40px;
+        margin-right: 3%;
+        margin-left: 3%;
+        background-color: rgb(253, 253, 253);
+        border: 1px solid black;
+    }
+    
+    .input2 {
+        width: 10%;
+        height: 40px;
+        margin: 0 0 3% 3%;
+        float: left;
+        background-color: black;
+        color: White;
+    }
+    
+    .input2:hover {
+        opacity: 0.7;
+    }
+    
+    .i-footer {
+        background-color: rgb(27, 25, 25);
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    #tothetop {
+        border: 1px solid whitesmoke;
+        color: white;
+        padding: 3px;
+        text-decoration: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    #tothetop:hover {
+        background-color: #555;
+    }
+    /* For desktop: */
+    
+    .col-1 {
+        width: 8.33%;
+    }
+    
+    .col-2 {
+        width: 16.66%;
+    }
+    
+    .col-20 {
+        width: 20%;
+    }
+    
+    .col-3 {
+        width: 25%;
+    }
+    
+    .col-4 {
+        width: 33.33%;
+    }
+    
+    .col-5 {
+        width: 41.66%;
+    }
+    
+    .col-6 {
+        width: 50%;
+    }
+    
+    .col-7 {
+        width: 58.33%;
+    }
+    
+    .col-8 {
+        width: 66.66%;
+    }
+    
+    .col-9 {
+        width: 75%;
+    }
+    
+    .col-10 {
+        width: 83.33%;
+    }
+    
+    .col-11 {
+        width: 91.66%;
+    }
+    
+    .col-12 {
+        width: 100%;
+    }
+    /*********** make it for IPHONE ***********/
+    
+    @media only screen and (max-width:450px) {
+        header {
+            height: 100px;
+        }
+        [class*="col-"] {
+            width: 100%;
+        }
+        p {
+            font-size: 14px;
+        }
+        header #logo {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            /* to center the text in div horiz. and vertic.*/
+            align-items: center;
+            text-align: left;
+            font-size: 20px;
+        }
+        #headerright {
+            width: 70%;
+            padding-top: 7%;
+        }
+        #headerright li {
+            margin: 1.9%;
+        }
+        section h1 {
+            font-size: 20px;
+            padding-top: 170px;
+            padding-left: 10px;
+        }
+        section p {
+            font-size: 14px;
+            padding-left: 10px;
+            font-feature-settings: 'lnum' 1;
+            line-height: 18px;
+        }
+        #one {
+            margin-left: 7%;
+            margin-bottom: 7%;
+            margin-top: -1%;
+            font-size: 14px;
+        }
+        .fa {
+            padding: 0.1%;
+            width: 7%;
+        }
+        .rass1 p {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 60px;
+        }
+        #boxtwo {
+            margin-right: 25%;
+            margin-left: 25%;
+            margin-bottom: 10%;
+            width: 50%;
+        }
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            text-align: center;
+            font-size: 14px;
+            padding: 3% 3% 3% 3%;
+        }
+        table {
+            width: 60%;
+            margin-bottom: 3%;
+        }
+        th {
+            background-color: #2c3e50;
+        }
+        tr {
+            background-color: #bdc3c7;
+        }
+        .button {
+            background-color: black;
+            border: none;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            font-family: Alegreya SC;
+            width: 100px;
+            height: 30px;
+            box-shadow: 0 8px 16px 0 rgba(248, 245, 245, 0.2), 0 6px 20px 0 rgba(245, 238, 238, 0.19);
+        }
+    }

@@ -372,8 +372,9 @@ tr {
     padding-top: 10px;
 }
 
-#tothetop {
-    border: 1px solid whitesmoke;
+#tothetop1 {
+    border: 0.5px solid #555;
+    border-radius: 3px;
     color: white;
     padding: 3px;
     text-decoration: none;

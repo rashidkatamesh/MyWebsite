@@ -7,95 +7,31 @@
     <!-- *********** -->
     <meta charset=’utf-8’>
     <meta name=viewport content=width=device-width, initial-scale=1.0>  
+
+<style>
+#ct-code-show{
+ border:1px solid black;
+ border-radius: 4px;
+ width: 90%;
+ height: 500px;
+ margin-top: 100px;
+ float: center;
+ margin-right: 5%;
+ margin-left: 5%;
+ }
+embed{
+    width: 100%;
+    height: 100%;
+}
+</style>
 </head>
 <body>
-<div style="padding-left: 20px;">
-<code>
 
-%%% CT Programm <br>
-%%% Rashid Katamesh<br>
-%%% Bildrekonstruktuieren<br> 
-%%% 03.2020<br>
-%%% Beginn:<br>
-clear all ; close all; clc<br>
-<br>
-%%% 0- Gegeben:<br>
-FOVx     = 450;<br>
-FOVy     = 400;<br>
-Mx       = 400;<br>
-My       = 350;<br>
-lang     = 750;<br>
-Sino     = load('Sinovivo.txt');<br>
-det      = size(Sino,1);           %557<br>
-Winkel   = size(Sino,2);           %180<br>
-lr       = [-FOVx/2; FOVy/2];      %links oben vektor<br>
-dx       = FOVx/Mx;                % Aufloesung<br>
-dy       = FOVy/My;<br>
-PSF_s    = zeros(My,Mx);<br>
-clims    = [0 265.7536];<br>
-nx       = round(Mx/dx);<br>
-ny       = round(My/dy);<br>
-Summe    = zeros(My,Mx);<br>
-detek    = lang/det; <br>
-lang/det<br>
-<br>
-<br>
-%%% 1- Rechenoperation: (Bildrekonstruktion):<br>
-for x = 1 : 400<br>
-    for y = 1 : 350<br>
-        for Ww = 1 : Winkel<br>
-            delta = [x*dx ; -y*dy];                  %[mm]: Physikalische Einheit<br>
-            r = [lr(1)+delta(1) ; lr(2)+delta(2)];   %[mm]: Physikalische Einheit<br>
-            p = (r(1)*cosd(Ww-1) + r(2)*sind(Ww-1)); %[mm]: Physikalische Einheit<br>
-            pp = round(p+lang/2);                    % Umrechnung zum Intervall [0->750]<br>
-            ppp = round(pp/detek);                   %index: Umstellung zu index<br>
-            Summe(y,x) = Summe(y,x) + Sino(ppp,Ww);  %Addieren zu vorherigen Werten<br>
-        end<br>
-            Bild(y,x) = Summe(y,x);                  %Das finale Bild<br>
-    end<br>
-end<br>
-<br>
-figure(1); <br>
-subplot(2,3,1); imagesc(Sino);  title('Sinogramm'); hold on<br>
-subplot(2,3,2); imagesc(Bild);  title('Originalbild'); hold on<br>
-<br>
-<br>
-
-%%% 2- 2x-Fourier fuer das Bild:<br>
-fbild   = fftshift(fft2(Bild));<br>
-ffbild  = log(1+abs(fbild));<br>
-subplot(2,3,3); imagesc(ffbild); title('Bild K-Raum'); hold on<br>
-<br>
-<br>
-%%% 3- Filtermatrix:>> Betrag k<br>
-for ii = 1:350<br>
-    for jj = 1:400<br>
-        w(ii,jj) = sqrt((ii-175)^2 + (jj-200)^2);<br>
-    end<br>
-end<br>
-subplot(2,3,4); imagesc(w); title('Filtermatrix'); hold on<br>
-subplot(2,3,5); surf(w); title('Gewichtung der Filterpixel'); hold on<br>
-<br>
-<br>
-%%% 4- K-Raum vom Bild mit der Filter Multiplizieren:<br>
-Final1   = w .* fbild;<br>
-Final2   = ifft2(ifftshift(Final1));<br>
-Final3   = abs(Final2);     %da complex douple<br>
-subplot(2,3,6); imagesc(Final3); title('Finales Bild'); hold off<br>
-
-<br>
-
-
-</code>
-
-</div>
-
-
-
-<p> the first image on the left side is the sinogram table which contains the raw information of intensity absorption of the CT beam through the human body which also represents the information of body parts and organs.</p>
-            <p>This transformation is done by C++ language with a filtering using MATLAB programm.
-            </p>
 <a style="color: #9DB9B5" href="https://en.wikipedia.org/wiki/Tomographic_reconstruction"> read more about CT image construction...</a>
- <img src="images/ct.jpg"/>
+
+
+<div id="ct-code-show">
+<embed src="CT_Code.html">
+</div>
 </body>
 </html>

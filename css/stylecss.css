@@ -357,6 +357,30 @@ progress::-moz-progress-bar {
     grid-row-end: 2;
 }
 
+.item-6 {
+    background-color: #c257b0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.item-7 {
+    background-color: #c257b0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.item-8 {
+    background-color: #c257b0;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
 .project-header2 {
     width: 100%;
     height: 30%;
@@ -388,6 +412,7 @@ progress::-moz-progress-bar {
 .item:hover .read-more {
     display: block;
     color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #item-calc {
@@ -790,9 +815,6 @@ tr {
         grid-row-end: 3;
         text-align: center;
         padding-right: 4px;
-    }
-    .item-2 p {
-        color: black;
     }
     #item-calc {
         padding: 6px;

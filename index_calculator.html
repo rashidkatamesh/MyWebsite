@@ -1,28 +1,55 @@
-              <div id="item-calc">
-        <div class="number" id="showarea">
-            <form>
-            <input type="text" id="input-field"><br>
-            </form>
-        </div>
-      
-        <div class="number num-ac">AC</div> <!--reset button: html w3school input type-->
-        <div class="number num-change-sign">+/-</div>
-        <div class="number num-percentage">%</div>
-        <div class="number num-division">/</div>
-        <div class="numbers num-7">7</div>
-        <div class="numbers num-8">8</div>
-        <div class="numbers num-9">9</div>
-        <div class="number num-multi">x</div>
-        <div class="numbers num-4">4</div>
-        <div class="numbers num-5">5</div>
-        <div class="numbers num-6">6</div>
-        <div class="number num-minus">-</div>
-        <div class="numbers num-1">1</div>
-        <div class="numbers num-2">2</div>
-        <div class="numbers num-3">3</div>
-        <div class="number num-plus">+</div>
-        <div class="number-0">0</div>
-        <div class="number num-comma">,</div>
-        <div class="number num-equal">=</div>
+              <!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title> Calculator </title>
+    <meta charset=’utf-8’>
+    <meta name=viewport content=width=device-width, initial-scale=1.0>
+    <link rel=stylesheet href=css/CalculatorStyle.css>
+    <!-- for later -->      
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+</head>
 
+<body>  
+<h3> a Simple Calculator made by me to test JavaScript with only using functions for the input buttons (no Classes Needed)</h3>   
+
+<div id="main">  
+    <div id="calculator-shape">
+        
+        <div id="showarea">
+        <p id="result">0</p>
+        <p id="current" max="15">0</p>
         </div>
+        <div class="number"><button class="btnoperation" type="button" onclick="clean()">AC</button></div> <!--reset button: html w3school input type-->
+        <div class="number"><button  class="btnoperation" type="button" onclick="delLastChar()">C</button></div>
+        <div class="number"><button class="btnoperation" type="button" onclick="changeSign()">+/-</button></div>
+        <div class="number"><button  class="btnoperation" type="button" onclick="insertOperand(1)">/</button></div>
+        <div class="numbers"><button  class="btnnumbers" type="button" onclick="insert(7)">7</button></div>
+        <div class="numbers"><button  class="btnnumbers" type="button" onclick="insert(8)">8</button></div>
+        <div class="numbers"><button  class="btnnumbers" type="button" onclick="insert(9)">9</button></div>
+        <div class="number"><button  class="btnoperation" type="button" onclick="insertOperand(2)">*</button></div>
+        <div class="numbers"><button  class="btnnumbers" type="button" onclick="insert(4)">4</button></div>
+        <div class="numbers"><button  class="btnnumbers" type="button" onclick="insert(5)">5</button></div>
+        <div class="numbers"><button  class="btnnumbers" type="button" onclick="insert(6)">6</button></div>
+        <div class="number"> <button  class="btnoperation" type="button" onclick="insertOperand(3)">-</button></div>
+        <div class="numbers"><button  class="btnnumbers" type="button" onclick="insert(1)">1</button></div>
+        <div class="numbers"><button  class="btnnumbers" type="button" onclick="insert(2)">2</button></div>
+        <div class="numbers"><button  class="btnnumbers" type="button" onclick="insert(3)">3</button></div>
+        <div class="number"><button  class="btnnumbers" type="button" onclick="insertOperand(4)">+</button></div>
+        <div class="numbers number-0"><button class="btnnumbers" type="button" onclick="insert(0)">0</button></div>
+        <div class="number"><button class="btnoperation" type="button" onclick="insertComma()">,</button></div>
+        <div class="number"><button class="btnoperation" type="button" onclick="insertOperand(5)">=</button></div>
+
+    </div>
+
+</div>
+
+
+<div id="footer">
+built by <a href="https://www.twitter.com/RashidKatamesh/">@rashidkatamesh</a>
+</div>
+<script src="js/calculator.js"></script>
+
+</body>
+</html>

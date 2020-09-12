@@ -27,7 +27,7 @@ h3 {
     width: 22%;
     height: 400px;
     margin: 90px auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -97,13 +97,13 @@ button {
 #result {
     color: white;
     padding: 10px 0 0 5px;
-    font-size: 18px;
+    font-size: 100%;
 }
 
 #current {
     color: white;
-    padding: 0 0 0 2px;
-    font-size: 40px;
+    padding-bottom: 3px;
+    font-size: 45px;
     max-width: 15;
 }
 

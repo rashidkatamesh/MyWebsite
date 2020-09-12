@@ -1,6 +1,6 @@
 "use strict"
-//var inputCurrent = document.getElementById("current").textContent;
-//document.write(inputCurrent);
+var operand;
+let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 function inputNumber() {
     var inputCurrent = document.getElementsByClassName("numbers").onclick;
@@ -45,34 +45,12 @@ function insertComma() {
     }
 }
 
-function insertOperand() {
-
-    var inputOld = document.getElementById("current").innerHTML;
-    var inputNew = document.getElementById("current").innerHTML;
-    var result;
-    document.getElementById("result") = result;
-    var newNum = String(num);
-    var secondNumber = insert(num);
-    if (document.getElementsByClassName("btnoperation").Attribute.value === "*" && inputCurrent.length >= 1) {
-        secondNum.onclick = insert(num);
-        var result = inputCurrent * secondNumber;
-        document.getElementById('result').innerHTML = result;
-    } else {
-        return 0;
-
-    }
-    var result = inputCurrent + newNum;
-    document.getElementById("current").innerHTML = result;
-}
-
-
-var operand;
-
 function insertOperand(operand) {
     var inputCurrent = document.getElementById("current").innerHTML;
     var lastChar = inputCurrent[inputCurrent.length - 1];
     var firstChar = inputCurrent[0];
-    if (lastChar == "*" || lastChar == "/" || lastChar == "+" || lastChar == "-") {
+    if (lastChar == "*" || lastChar == "/" || lastChar == "+" || lastChar == "-" ||
+        inputCurrent == "") {
         inputCurrent = inputCurrent;
     } else {
         switch (operand) {
